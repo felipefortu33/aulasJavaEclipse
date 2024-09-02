@@ -56,6 +56,7 @@ public class Lab03Sistema {
 					new Lab03ContaCorrente(agencia,conta,nome,saldo);
 			myConta.gravar();
 			System.out.println("Cadastro realizado com sucesso.");
+			System.out.println("Saldo atual: " + myConta.getSaldo() );
 		}
 	}
 	public void execSaque() {
@@ -76,6 +77,7 @@ public class Lab03Sistema {
 			if (ret == 1) {
 				System.out.println("Saque realizado com sucesso.");
 				myConta.gravar();
+				System.out.println("Saldo atual: " + myConta.getSaldo() );
 			}
 			else {
 				System.out.println("Saldo insuficiente.");
@@ -100,6 +102,7 @@ public class Lab03Sistema {
 			myConta.deposito(val);
 			myConta.gravar();
 			System.out.println("Deposito realizado com sucesso.");
+			System.out.println("Saldo atual: " + myConta.getSaldo() );
 		}
 	}
 	public void execConsulta() {
