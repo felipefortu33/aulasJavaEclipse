@@ -1,6 +1,6 @@
 package model;
 
-public class Lab03ContaCorrenteBancoDados {
+public class Lab05ContaCorrenteBancoDados {
     
     // Atributos privados da conta corrente
     private int numAge;  // Número da agência
@@ -9,13 +9,13 @@ public class Lab03ContaCorrenteBancoDados {
     private double saldo;  // Saldo da conta
 
     // Construtor para criar a conta com agência e número da conta (para consulta, saque e depósito)
-    public Lab03ContaCorrenteBancoDados(int ag, int cta) {
+    public Lab05ContaCorrenteBancoDados(int ag, int cta) {
         this.numAge = ag;
         this.numConta = cta;
     }
 
     // Construtor completo para cadastramento da conta
-    public Lab03ContaCorrenteBancoDados(int ag, int ca, String nome, double saldo) {
+    public Lab05ContaCorrenteBancoDados(int ag, int ca, String nome, double saldo) {
         this.numAge = ag;
         this.numConta = ca;
         this.nome = nome;
@@ -78,9 +78,4 @@ public class Lab03ContaCorrenteBancoDados {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
-	public double getLimiteCredito() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }

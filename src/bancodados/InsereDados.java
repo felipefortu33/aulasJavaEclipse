@@ -8,6 +8,7 @@ import model.Lab03ContaCorrenteBancoDados;
 
 public class InsereDados {
 
+    // Método para inserir dados em uma conta corrente comum
     public void inserirDados(Connection con, Lab03ContaCorrenteBancoDados banco) {
         String ins = "INSERT INTO banco (nome, agencia, conta, saldo) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = con.prepareStatement(ins)) {
@@ -15,7 +16,7 @@ public class InsereDados {
             stmt.setInt(2, banco.getNumAge());
             stmt.setInt(3, banco.getNumConta());
             stmt.setDouble(4, banco.getSaldo());
-            stmt.execute();
+            stmt.executeUpdate();
             System.out.println("Dados inseridos com sucesso.");
         } catch (SQLException e) {
             System.out.println("Problemas na inserção dos dados.");
